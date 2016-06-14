@@ -1,0 +1,17 @@
+{
+  "name": "sphero_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cylon-keyboard": "^0.17.0",
+    "cylon-sphero": "^0.23.0",
+    "keypress": "^0.2.1"
+  }
+}

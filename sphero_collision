@@ -1,0 +1,31 @@
+"use strict";
+
+var Cylon = require("cylon");
+
+Cylon.robot({
+  connections: {
+    sphero: { adaptor: "sphero", port: "/dev/tty.Sphero-YRG-AMP-SPP" }
+  },
+
+  devices: {
+    sphero: { driver: "sphero" }
+  },
+
+  work: function(me) {
+    var color = 0x00FF00,
+        bitFilter = 0xFFFF00;
+
+    console.log("Setting up Collision Detection...");
+
+    me.sphero.on("collision", function() {
+      console.log("Doh!");
+      color = color ^ bitFilter;
+      console.log("Bart!: " + (color.toString(16)) + " ");
+      me.sphero.color(color);
+      me.sphero.roll(100, Math.floor(Math.random() * 360));
+    });
+
+    me.sphero.color(color);
+    me.sphero.detectCollisions();
+  }
+}).start();
