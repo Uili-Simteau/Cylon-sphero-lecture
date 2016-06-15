@@ -1,5 +1,7 @@
 # Cylon-sphero-lecture
-lecture on cylon.js with Sphero platform.
+Lecture on cylon.js with Sphero platform.
+
+The main point I want to communicate is that Cylon.js is a powerful enabler for us as coders of javascript to interact with hardware. The existential question of AI arrises in my mind about what happens when the Robots control themselves? (a later talk)
 
 This campus lecture is a quick look at Cylon.js, and using the Sphero 2.0 robot/smart Toy/ game system platform to test it out on.
 
